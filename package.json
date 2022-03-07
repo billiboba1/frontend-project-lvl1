@@ -19,5 +19,8 @@
   "homepage": "https://github.com/billiboba1/frontend-project-lvl1#readme",
   "bin": {
     "code": "bin/brain-games.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
