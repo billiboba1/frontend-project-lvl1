@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const greating = x => {
+const greating = () => {
     const name = readlineSync.question('May you have a name? ');
     return (`Hello, ${name}!`);
 }
