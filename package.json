@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/billiboba1/frontend-project-lvl1#readme",
   "bin": {
-    "code": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "dependencies": {
     "eslint": "^8.10.0",
