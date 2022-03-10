@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import greating from '../src/cli.js';
 
 const get_random = () => {
     const min = 1;
@@ -6,7 +7,7 @@ const get_random = () => {
     return Math.round(Math.random() * (max - min) + min);
 }
 
-const first_test = () => {
+const brain_even = () => {
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
     let counter = 0;
     do {
@@ -23,10 +24,19 @@ const first_test = () => {
         }
         counter += 1;
         if (right_answer != cli_answer) {
+            console.log(`'${cli_answer}' is wrong answer ;(. Correct answer was '${right_answer}'.\nLet's try again, ${name}!`)
             return cli_answer;
         }
     } while (counter != 3) 
     return 1;
 }
 
+console.log('Welcome to the Brain Games!');
+const name = greating();
+console.log(`Hello, ${name}`);
+let cli_answer_1 = brain_even();
+while (cli_answer_1 != 1) {
+    cli_answer_1 = brain_even();
+} 
+console.log(`Congratulations, ${name}!`);
 export default first_test;
