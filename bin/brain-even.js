@@ -39,4 +39,4 @@ while (cli_answer_1 != 1) {
     cli_answer_1 = brain_even();
 } 
 console.log(`Congratulations, ${name}!`);
-export default first_test;
+export default brain_even;
