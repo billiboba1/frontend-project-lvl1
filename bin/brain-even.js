@@ -9,8 +9,9 @@ const get_random = () => {
     return Math.round(Math.random() * (max - min) + min);
 }
 
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
 const brain_even = () => {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
     let counter = 0;
     do {
         if (counter > 0) {

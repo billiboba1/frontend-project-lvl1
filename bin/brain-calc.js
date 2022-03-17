@@ -8,8 +8,9 @@ const get_random = (max) => {
     return Math.round(Math.random() * (max - min) + min);
 }
 
+console.log('What is the result of the expression?');
+
 const brain_calc = () => {
-    console.log('What is the result of the expression?');
     let counter = 0;
     do {
         const question = get_random(2,99);

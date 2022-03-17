@@ -7,8 +7,9 @@ const get_random = (min, max) => {
     return Math.round(Math.random() * (max - min) + min);
 }
 
+console.log('What number is missing in the progression?');
+
 const brain_progression = () => {
-    console.log('What number is missing in the progression?');
     let counter = 0;
     do {
         if (counter > 0) {
