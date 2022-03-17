@@ -50,9 +50,6 @@ console.log('Welcome to the Brain Games!');
 const name = greating();
 console.log(`Hello, ${name}`);
 console.log('What is the result of the expression?');
-let cli_answer_1 = brain_calc();
-while (cli_answer_1 != 1) {
-    cli_answer_1 = brain_calc();
-} 
-console.log(`Congratulations, ${name}!`);
-
+if (brain_calc() === 1) {
+    console.log(`Congratulations, ${name}!`);
+}

@@ -40,9 +40,6 @@ console.log('Welcome to the Brain Games!');
 const name = greating();
 console.log(`Hello, ${name}`);
 console.log('Find the greatest common divisor of given numbers.');
-let cli_answer_1 = brain_gcd();
-while (cli_answer_1 != 1) {
-    cli_answer_1 = brain_gcd();
-} 
-console.log(`Congratulations, ${name}!`);
-
+if (brain_gcd() === 1) {
+    console.log(`Congratulations, ${name}!`);
+}

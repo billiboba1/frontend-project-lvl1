@@ -42,9 +42,6 @@ console.log('Welcome to the Brain Games!');
 const name = greating();
 console.log(`Hello, ${name}`);
 console.log('What number is missing in the progression?');
-let cli_answer_1 = brain_progression();
-while (cli_answer_1 != 1) {
-    cli_answer_1 = brain_progression();
-} 
-console.log(`Congratulations, ${name}!`);
-
+if (brain_progression() === 1) {
+    console.log(`Congratulations, ${name}!`);
+}

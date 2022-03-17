@@ -36,8 +36,6 @@ console.log('Welcome to the Brain Games!');
 const name = greating();
 console.log(`Hello, ${name}`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
-let cli_answer_1 = brain_even();
-while (cli_answer_1 != 1) {
-    cli_answer_1 = brain_even();
-} 
-console.log(`Congratulations, ${name}!`);
+if (brain_even() === 1) {
+    console.log(`Congratulations, ${name}!`);
+}
