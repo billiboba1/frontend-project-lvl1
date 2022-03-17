@@ -17,18 +17,21 @@ const brain_progression = () => {
         const random_num = get_random(0, total_nums - 1);
         const range = get_random(1, 5);
         let start_num = get_random(1,20);
-        let list = [];
+        let nums = '';
         let right_answer;
         for (let i = 0; i < total_nums; i += 1) {
+            let add;
             if (i === random_num) {
-                list.push('..');
+                add = ' ..';
+                nums += add;
                 right_answer = start_num;
             } else {
-                list.push(start_num);
+                add = ' ' + String(start_num);
+                nums += add;
             }
             start_num += range;
         }
-        const cli_answer = readlineSync.question(`Question: ${list}\nYour answer: `);
+        const cli_answer = readlineSync.question(`Question:${nums}\nYour answer: `);
         counter += 1;
         if (right_answer != cli_answer) {
             console.log(`'${cli_answer}' is wrong answer ;(. Correct answer was '${right_answer}'.\nLet's try again, ${name}!`)
