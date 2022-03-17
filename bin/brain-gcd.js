@@ -9,8 +9,6 @@ const get_random = () => {
     return Math.round(Math.random() * (max - min) + min);
 }
 
-console.log('Find the greatest common divisor of given numbers.');
-
 const brain_gcd = () => {
     let counter = 0;
     do {
@@ -41,10 +39,10 @@ const brain_gcd = () => {
 console.log('Welcome to the Brain Games!');
 const name = greating();
 console.log(`Hello, ${name}`);
+console.log('Find the greatest common divisor of given numbers.');
 let cli_answer_1 = brain_gcd();
 while (cli_answer_1 != 1) {
     cli_answer_1 = brain_gcd();
 } 
 console.log(`Congratulations, ${name}!`);
 
-export default brain_gcd;

@@ -9,8 +9,6 @@ const get_random = () => {
     return Math.round(Math.random() * (max - min) + min);
 }
 
-console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-
 const brain_prime = () => {
     let counter = 0;
     const prime_list = [2, 3, 5, 7, 11, 13, 17,	19,	23,	29,	31,	37,	41,	43,	47,	53,	59,	61,	67,	71, 73, 79,	83,	89, 97];
@@ -38,10 +36,10 @@ const brain_prime = () => {
 console.log('Welcome to the Brain Games!');
 const name = greating();
 console.log(`Hello, ${name}`);
+console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 let cli_answer_1 = brain_prime();
 while (cli_answer_1 != 1) {
     cli_answer_1 = brain_prime();
 } 
 console.log(`Congratulations, ${name}!`);
 
-export default brain_prime;

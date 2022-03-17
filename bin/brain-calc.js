@@ -8,8 +8,6 @@ const get_random = (max) => {
     return Math.round(Math.random() * (max - min) + min);
 }
 
-console.log('What is the result of the expression?');
-
 const brain_calc = () => {
     let counter = 0;
     do {
@@ -51,10 +49,10 @@ const brain_calc = () => {
 console.log('Welcome to the Brain Games!');
 const name = greating();
 console.log(`Hello, ${name}`);
+console.log('What is the result of the expression?');
 let cli_answer_1 = brain_calc();
 while (cli_answer_1 != 1) {
     cli_answer_1 = brain_calc();
 } 
 console.log(`Congratulations, ${name}!`);
 
-export default brain_calc;

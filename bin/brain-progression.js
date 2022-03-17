@@ -7,8 +7,6 @@ const get_random = (min, max) => {
     return Math.round(Math.random() * (max - min) + min);
 }
 
-console.log('What number is missing in the progression?');
-
 const brain_progression = () => {
     let counter = 0;
     do {
@@ -43,10 +41,10 @@ const brain_progression = () => {
 console.log('Welcome to the Brain Games!');
 const name = greating();
 console.log(`Hello, ${name}`);
+console.log('What number is missing in the progression?');
 let cli_answer_1 = brain_progression();
 while (cli_answer_1 != 1) {
     cli_answer_1 = brain_progression();
 } 
 console.log(`Congratulations, ${name}!`);
 
-export default brain_progression;
