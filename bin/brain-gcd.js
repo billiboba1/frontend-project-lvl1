@@ -28,7 +28,8 @@ const brain_gcd = () => {
             }
         }
         counter += 1;
-        if (Number(right_answer) !== cli_answer) {
+        console.log(typeof(right_answer), typeof(cli_answer))
+        if (right_answer !== Number(cli_answer)) {
             console.log(`'${cli_answer}' is wrong answer ;(. Correct answer was '${right_answer}'.\nLet's try again, ${name}!`)
             return 0;
         }
