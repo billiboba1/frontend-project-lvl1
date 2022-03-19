@@ -13,12 +13,12 @@ const brain_progression = () => {
         if (counter > 0) {
             console.log('Correct!');
         }
-        const total_nums = get_random(5, 10);
-        const random_num = get_random(0, total_nums - 1);
-        const range = get_random(1, 5);
-        let start_num = get_random(1,20);
-        let nums = '';
-        let right_answer;
+        const total_nums = get_random(5, 10),
+              random_num = get_random(0, total_nums - 1),
+              range = get_random(1, 5);
+        let start_num = get_random(1,20),
+            nums = '',
+            right_answer;
         for (let i = 0; i < total_nums; i += 1) {
             let add;
             if (i === random_num) {
@@ -33,11 +33,11 @@ const brain_progression = () => {
         }
         const cli_answer = readlineSync.question(`Question:${nums}\nYour answer: `);
         counter += 1;
-        if (right_answer != cli_answer) {
+        if (right_answer !== cli_answer) {
             console.log(`'${cli_answer}' is wrong answer ;(. Correct answer was '${right_answer}'.\nLet's try again, ${name}!`)
             return 0;
         }
-    } while (counter != 3) 
+    } while (counter !== 3) 
     return 1;
 }
 

@@ -12,10 +12,10 @@ const brain_calc = () => {
     let counter = 0;
     do {
         const question = get_random(2,99);
-        let right_answer;
-        let first_num;
-        let second_num;
-        let cli_answer;
+        let right_answer,
+            first_num,
+            second_num,
+            cli_answer;
         switch (question) {
             case 0:
                 first_num = get_random(100);
@@ -37,12 +37,12 @@ const brain_calc = () => {
                 break;
         }
         counter += 1;
-        if (right_answer != cli_answer) {
+        if (right_answer !== cli_answer) {
             console.log(`'${cli_answer}' is wrong answer ;(. Correct answer was '${right_answer}'.\nLet's try again, ${name}!`)
             return 0;
         }
         console.log('Correct!');
-    } while (counter != 3)
+    } while (counter !== 3)
     return 1;
 }
 
