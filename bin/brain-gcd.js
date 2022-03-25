@@ -3,9 +3,12 @@
 import readlineSync from 'readline-sync';
 import greating from '../src/cli.js';
 
+console.log('Welcome to the Brain Games!');
+const name = greating();
+console.log(`Hello, ${name}`);
+
 const getRandom = () => {
-  const min = 2,
-        max = 60;
+  const min = 2, max = 60;
   return Math.round(Math.random() * (max - min) + min);
 };
 
@@ -15,9 +18,7 @@ const brainGcd = () => {
     if (counter > 0) {
       console.log('Correct!');
     }
-    let firstNum = getRandom(),
-      secondNum = getRandom(),
-      rightAnswer = Math.min(secondNum, firstNum);
+    let firstNum = getRandom(), secondNum = getRandom(), rightAnswer = Math.min(secondNum, firstNum);
     const cliAnswer = readlineSync.question(`Question: ${firstNum} ${secondNum}\nYour answer: `);
     let forBreak = 0;
     while (forBreak === 0) {
@@ -33,13 +34,10 @@ const brainGcd = () => {
       console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`)
       return 0;
     }
-  } while (counter !== 3) 
+  } while (counter !== 3)
   return 1;
 };
 
-console.log('Welcome to the Brain Games!');
-const name = greating();
-console.log(`Hello, ${name}`);
 console.log('Find the greatest common divisor of given numbers.');
 if (brainGcd() === 1) {
   console.log(`Congratulations, ${name}!`);

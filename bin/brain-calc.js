@@ -3,6 +3,10 @@
 import readlineSync from 'readline-sync';
 import greating from '../src/cli.js';
 
+console.log('Welcome to the Brain Games!');
+const name = greating();
+console.log(`Hello, ${name}`);
+
 const getRandom = (max) => {
   const min = 1;
   return Math.round(Math.random() * (max - min) + min);
@@ -12,10 +16,7 @@ const brainCalc = () => {
   let counter = 0;
   do {
     const question = getRandom(2, 99);
-    let rightAnswer,
-      firstNum,
-      secondNum,
-      cliAnswer;
+    let rightAnswer, firstNum, secondNum, cliAnswer;
     switch (question) {
       case 0:
         firstNum = getRandom(100);
@@ -37,10 +38,10 @@ const brainCalc = () => {
         break;
       default:
         break;
-      }
+    }
     counter += 1;
     if (rightAnswer !== Number(cliAnswer)) {
-      console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`)
+      console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
       return 0;
     }
     console.log('Correct!');
@@ -48,9 +49,6 @@ const brainCalc = () => {
   return 1;
 };
 
-console.log('Welcome to the Brain Games!');
-const name = greating();
-console.log(`Hello, ${name}`);
 console.log('What is the result of the expression?');
 if (brainCalc() === 1) {
   console.log(`Congratulations, ${name}!`);

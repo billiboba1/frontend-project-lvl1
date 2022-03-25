@@ -3,9 +3,12 @@
 import readlineSync from 'readline-sync';
 import greating from '../src/cli.js';
 
+console.log('Welcome to the Brain Games!');
+const name = greating();
+console.log(`Hello, ${name}`);
+
 const getRandom = () => {
-    const min = 2,
-          max = 100;
+    const min = 2, max = 100;
     return Math.round(Math.random() * (max - min) + min);
 };
 
@@ -16,8 +19,7 @@ const brainPrime = () => {
     if (counter > 0) {
       console.log('Correct!');
     }
-    let num = getRandom(),
-      rightAnswer;
+    let num = getRandom(), rightAnswer;
     const cliAnswer = readlineSync.question(`Question: ${num}\nYour answer: `);
     if (primeList.includes(num)) {
       rightAnswer = 'yes';
@@ -29,13 +31,10 @@ const brainPrime = () => {
       console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`)
       return 0;
     }
-  } while (counter !== 3) 
+  } while (counter !== 3)
   return 1;
 };
 
-console.log('Welcome to the Brain Games!');
-const name = greating();
-console.log(`Hello, ${name}`);
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 if (brainPrime() === 1) {
   console.log(`Congratulations, ${name}!`);
