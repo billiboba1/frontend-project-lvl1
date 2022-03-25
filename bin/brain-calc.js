@@ -16,7 +16,10 @@ const brainCalc = () => {
   let counter = 0;
   do {
     const question = getRandom(2, 99);
-    let rightAnswer, firstNum, secondNum, cliAnswer;
+    let rightAnswer, 
+        firstNum, 
+        secondNum,
+        cliAnswer;
     switch (question) {
       case 0:
         firstNum = getRandom(100);
@@ -45,7 +48,7 @@ const brainCalc = () => {
       return 0;
     }
     console.log('Correct!');
-  } while (counter !== 3)
+  } while (counter !== 3);
   return 1;
 };
 
