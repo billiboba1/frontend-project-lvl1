@@ -25,7 +25,7 @@ const brain_prime = () => {
             right_answer = 'no';
         }
         counter += 1;
-        if (right_answer !== Number(cli_answer)) {
+        if (right_answer !== cli_answer) {
             console.log(`'${cli_answer}' is wrong answer ;(. Correct answer was '${right_answer}'.\nLet's try again, ${name}!`)
             return 0;
         }

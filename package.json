@@ -31,5 +31,8 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jest": "^26.1.1",
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint-plugin-fp": "^2.3.0"
   }
 }
