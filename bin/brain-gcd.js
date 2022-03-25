@@ -18,7 +18,10 @@ const brainGcd = () => {
     if (counter > 0) {
       console.log('Correct!');
     }
-    let firstNum = getRandom(), secondNum = getRandom(), rightAnswer = Math.min(secondNum, firstNum);
+    let firstNum = getRandom(), 
+        secondNum = getRandom(), 
+        rightAnswer = Math.min(secondNum, firstNum);
+        
     const cliAnswer = readlineSync.question(`Question: ${firstNum} ${secondNum}\nYour answer: `);
     let forBreak = 0;
     while (forBreak === 0) {
