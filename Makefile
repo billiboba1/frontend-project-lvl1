@@ -6,6 +6,8 @@ publish:
 	npm publish --dry-run
 lint:
 	npx eslint .
+test:
+	npm test
 brain-even:
 	node bin/brain-even.js
 brain-calc:

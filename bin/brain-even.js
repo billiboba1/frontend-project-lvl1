@@ -3,39 +3,39 @@
 import readlineSync from 'readline-sync';
 import greating from '../src/cli.js';
 
-const get_random = () => {
-    const min = 1,
-          max = 100;
-    return Math.round(Math.random() * (max - min) + min);
-}
+const getRandom = () => {
+  const min = 1,
+        max = 100;
+  return Math.round(Math.random() * (max - min) + min);
+};
 
-const brain_even = () => {
-    let counter = 0;
-    do {
-        if (counter > 0) {
-            console.log('Correct!');
-        }
-        let x = get_random(),
-                right_answer;
-        const cli_answer = readlineSync.question(`Question: ${x}\nYour answer: `);
-        if (x % 2 == 0) {
-            right_answer = 'yes';
-        } else {
-            right_answer = 'no';
-        }
-        counter += 1;
-        if (right_answer !== cli_answer) {
-            console.log(`'${cli_answer}' is wrong answer ;(. Correct answer was '${right_answer}'.\nLet's try again, ${name}!`)
-            return cli_answer;
-        }
-    } while (counter !== 3) 
-    return 1;
-}
+const brainEven = () => {
+  let counter = 0;
+  do {
+    if (counter > 0) {
+      console.log('Correct!');
+    }
+    let x = getRandom(),
+        rightAnswer;
+    const cliAnswer = readlineSync.question(`Question: ${x}\nYour answer: `);
+    if (x % 2 == 0) {
+      rightAnswer = 'yes';
+    } else {
+      rightAnswer = 'no';
+    }
+    counter += 1;
+    if (rightAnswer !== cliAnswer) {
+      console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`)
+      return cliAnswer;
+    }
+  } while (counter !== 3) 
+  return 1;
+};
 
 console.log('Welcome to the Brain Games!');
 const name = greating();
 console.log(`Hello, ${name}`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
-if (brain_even() === 1) {
-    console.log(`Congratulations, ${name}!`);
+if (brainEven() === 1) {
+  console.log(`Congratulations, ${name}!`);
 }
