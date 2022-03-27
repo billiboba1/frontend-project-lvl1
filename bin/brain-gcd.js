@@ -8,8 +8,8 @@ const name = greating();
 console.log(`Hello, ${name}`);
 
 const getRandom = () => {
-  const min = 2,
-    max = 60;
+  const min = 2;
+  const max = 60;
   return Math.round(Math.random() * (max - min) + min);
 };
 
@@ -19,10 +19,10 @@ const brainGcd = () => {
     if (counter > 0) {
       console.log('Correct!');
     }
-    const secondNum = getRandom(),
-      firstNum = getRandom();
-    let rightAnswer = Math.min(secondNum, firstNum),
-      forBreak = 0;
+    const secondNum = getRandom();
+    const firstNum = getRandom();
+    let rightAnswer = Math.min(secondNum, firstNum);
+    let forBreak = 0;
     const cliAnswer = readlineSync.question(`Question: ${firstNum} ${secondNum}\nYour answer: `);
     while (forBreak === 0) {
       if ((firstNum % rightAnswer === 0) && (secondNum % rightAnswer === 0)) {

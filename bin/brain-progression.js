@@ -15,12 +15,12 @@ const brainProgression = () => {
     if (counter > 0) {
       console.log('Correct!');
     }
-    const totalNums = getRandom(5, 10),
-      randomNum = getRandom(0, totalNums - 1),
-      range = getRandom(1, 5);
-    let startNum = getRandom(1, 20),
-      nums = '',
-      rightAnswer;
+    const totalNums = getRandom(5, 10);
+    const randomNum = getRandom(0, totalNums - 1);
+    const range = getRandom(1, 5);
+    let startNum = getRandom(1, 20);
+    let nums = '';
+    let rightAnswer;
     for (let i = 0; i < totalNums; i += 1) {
       let add;
       if (i === randomNum) {

@@ -8,8 +8,8 @@ const name = greating();
 console.log(`Hello, ${name}`);
 
 const getRandom = () => {
-  const min = 2,
-    max = 100;
+  const min = 2;
+  const max = 100;
   return Math.round(Math.random() * (max - min) + min);
 };
 
@@ -22,8 +22,8 @@ const brainPrime = () => {
       console.log('Correct!');
     }
     let rightAnswer;
-    const num = getRandom(),
-      cliAnswer = readlineSync.question(`Question: ${num}\nYour answer: `);
+    const num = getRandom();
+    const cliAnswer = readlineSync.question(`Question: ${num}\nYour answer: `);
     if (primeList.includes(num)) {
       rightAnswer = 'yes';
     } else {

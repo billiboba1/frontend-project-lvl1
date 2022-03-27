@@ -16,10 +16,10 @@ const brainCalc = () => {
   let counter = 0;
   do {
     const question = getRandom(2, 99);
-    let rightAnswer,
-      firstNum,
-      secondNum,
-      cliAnswer;
+    let rightAnswer;
+    let firstNum;
+    let secondNum;
+    let cliAnswer;
     switch (question) {
       case 0:
         firstNum = getRandom(100);
