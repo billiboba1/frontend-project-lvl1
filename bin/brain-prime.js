@@ -21,8 +21,8 @@ const brainPrime = () => {
       console.log('Correct!');
     }
     let rightAnswer;
-    const cliAnswer = readlineSync.question(`Question: ${num}\nYour answer: `),
-      num = getRandom();
+    const num = getRandom(),
+      cliAnswer = readlineSync.question(`Question: ${num}\nYour answer: `);
     if (primeList.includes(num)) {
       rightAnswer = 'yes';
     } else {
