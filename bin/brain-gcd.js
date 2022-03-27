@@ -8,7 +8,7 @@ const name = greating();
 console.log(`Hello, ${name}`);
 
 const getRandom = () => {
-  const min = 2, 
+  const min = 2,
     max = 60;
   return Math.round(Math.random() * (max - min) + min);
 };

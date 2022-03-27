@@ -8,7 +8,7 @@ const name = greating();
 console.log(`Hello, ${name}`);
 
 const getRandom = () => {
-  const min = 1, 
+  const min = 1,
     max = 100;
   return Math.round(Math.random() * (max - min) + min);
 };
@@ -19,7 +19,7 @@ const brainEven = () => {
     if (counter > 0) {
       console.log('Correct!');
     }
-    const x = getRandom(), 
+    const x = getRandom(),
       cliAnswer = readlineSync.question(`Question: ${x}\nYour answer: `);
     let rightAnswer;
     if (x % 2 === 0) {

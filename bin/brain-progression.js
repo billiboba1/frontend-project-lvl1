@@ -7,7 +7,7 @@ console.log('Welcome to the Brain Games!');
 const name = greating();
 console.log(`Hello, ${name}`);
 
-const getRandom = (min, max) => { return Math.round(Math.random() * (max - min) + min) };
+const getRandom = (min, max) => Math.round(Math.random() * (max - min) + min);
 
 const brainProgression = () => {
   let counter = 0;
@@ -18,7 +18,7 @@ const brainProgression = () => {
     const totalNums = getRandom(5, 10),
       randomNum = getRandom(0, totalNums - 1),
       range = getRandom(1, 5);
-    let startNum = getRandom(1,20),
+    let startNum = getRandom(1, 20),
       nums = '',
       rightAnswer;
     for (let i = 0; i < totalNums; i += 1) {
@@ -28,7 +28,7 @@ const brainProgression = () => {
         nums += add;
         rightAnswer = startNum;
       } else {
-        add = ' ' + String(startNum);
+        add = ` ${String(startNum)}`;
         nums += add;
       }
       startNum += range;
