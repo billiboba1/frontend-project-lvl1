@@ -8,7 +8,8 @@ const name = greating();
 console.log(`Hello, ${name}`);
 
 const getRandom = () => {
-  const min = 1, max = 100;
+  const min = 1, 
+    max = 100;
   return Math.round(Math.random() * (max - min) + min);
 };
 
@@ -18,7 +19,8 @@ const brainEven = () => {
     if (counter > 0) {
       console.log('Correct!');
     }
-    const x = getRandom(), cliAnswer = readlineSync.question(`Question: ${x}\nYour answer: `);
+    const x = getRandom(), 
+      cliAnswer = readlineSync.question(`Question: ${x}\nYour answer: `);
     let rightAnswer;
     if (x % 2 === 0) {
       rightAnswer = 'yes';
@@ -27,10 +29,10 @@ const brainEven = () => {
     }
     counter += 1;
     if (rightAnswer !== cliAnswer) {
-      console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`)
+      console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
       return cliAnswer;
     }
-  } while (counter !== 3)
+  } while (counter !== 3);
   return 1;
 };
 

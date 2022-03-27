@@ -8,8 +8,9 @@ const name = greating();
 console.log(`Hello, ${name}`);
 
 const getRandom = () => {
-    const min = 2, max = 100;
-    return Math.round(Math.random() * (max - min) + min);
+  const min = 2,
+    max = 100;
+  return Math.round(Math.random() * (max - min) + min);
 };
 
 const brainPrime = () => {
@@ -19,8 +20,9 @@ const brainPrime = () => {
     if (counter > 0) {
       console.log('Correct!');
     }
-    let num = getRandom(), rightAnswer;
-    const cliAnswer = readlineSync.question(`Question: ${num}\nYour answer: `);
+    let rightAnswer;
+    const cliAnswer = readlineSync.question(`Question: ${num}\nYour answer: `),
+      num = getRandom();
     if (primeList.includes(num)) {
       rightAnswer = 'yes';
     } else {
@@ -28,10 +30,10 @@ const brainPrime = () => {
     }
     counter += 1;
     if (rightAnswer !== cliAnswer) {
-      console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`)
+      console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
       return 0;
     }
-  } while (counter !== 3)
+  } while (counter !== 3);
   return 1;
 };
 

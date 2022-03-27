@@ -8,7 +8,8 @@ const name = greating();
 console.log(`Hello, ${name}`);
 
 const getRandom = () => {
-  const min = 2, max = 60;
+  const min = 2, 
+    max = 60;
   return Math.round(Math.random() * (max - min) + min);
 };
 
@@ -18,12 +19,11 @@ const brainGcd = () => {
     if (counter > 0) {
       console.log('Correct!');
     }
-    let firstNum = getRandom(), 
-        secondNum = getRandom(), 
-        rightAnswer = Math.min(secondNum, firstNum);
-        
-    const cliAnswer = readlineSync.question(`Question: ${firstNum} ${secondNum}\nYour answer: `);
-    let forBreak = 0;
+    let rightAnswer = Math.min(secondNum, firstNum),
+      forBreak = 0;
+    const secondNum = getRandom(),
+      firstNum = getRandom(),
+      cliAnswer = readlineSync.question(`Question: ${firstNum} ${secondNum}\nYour answer: `);
     while (forBreak === 0) {
       if ((firstNum % rightAnswer === 0) && (secondNum % rightAnswer === 0)) {
         forBreak = 1;
@@ -32,12 +32,12 @@ const brainGcd = () => {
       }
     }
     counter += 1;
-    console.log(typeof(rightAnswer), typeof(cliAnswer))
+    console.log(typeof (rightAnswer), typeof (cliAnswer));
     if (rightAnswer !== Number(cliAnswer)) {
-      console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`)
+      console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
       return 0;
     }
-  } while (counter !== 3)
+  } while (counter !== 3);
   return 1;
 };
 

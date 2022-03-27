@@ -7,9 +7,7 @@ console.log('Welcome to the Brain Games!');
 const name = greating();
 console.log(`Hello, ${name}`);
 
-const getRandom = (min, max) => {
-  return Math.round(Math.random() * (max - min) + min);
-};
+const getRandom = (min, max) => { return Math.round(Math.random() * (max - min) + min) };
 
 const brainProgression = () => {
   let counter = 0;
@@ -17,8 +15,12 @@ const brainProgression = () => {
     if (counter > 0) {
       console.log('Correct!');
     }
-    const totalNums = getRandom(5, 10), randomNum = getRandom(0, totalNums - 1), range = getRandom(1, 5);
-    let startNum = getRandom(1,20), nums = '', rightAnswer;
+    const totalNums = getRandom(5, 10),
+      randomNum = getRandom(0, totalNums - 1),
+      range = getRandom(1, 5);
+    let startNum = getRandom(1,20),
+      nums = '',
+      rightAnswer;
     for (let i = 0; i < totalNums; i += 1) {
       let add;
       if (i === randomNum) {
@@ -34,10 +36,10 @@ const brainProgression = () => {
     const cliAnswer = readlineSync.question(`Question:${nums}\nYour answer: `);
     counter += 1;
     if (rightAnswer !== Number(cliAnswer)) {
-      console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`)
+      console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
       return 0;
     }
-  } while (counter !== 3)
+  } while (counter !== 3);
   return 1;
 };
 
