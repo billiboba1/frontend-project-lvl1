@@ -1,3 +1,6 @@
+import {wrongAnswer} from "../src/cli.js";
+import {even} from "../src/cli.js"
+
 const getRandom = () => {
   const min = 1;
   const max = 100;
@@ -5,29 +8,19 @@ const getRandom = () => {
 };
 
 const brainEven = () => {
-  let counter = 0;
-  do {
-    if (counter > 0) {
-      console.log('Correct!');
-    }
-    const x = getRandom();
-    const cliAnswer = readlineSync.question(`Question: ${x}\nYour answer: `);
-    let rightAnswer;
-    if (x % 2 === 0) {
-      rightAnswer = 'yes';
-    } else {
-      rightAnswer = 'no';
-    }
-    counter += 1;
-    if (rightAnswer !== cliAnswer) {
-      console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
-      return cliAnswer;
-    }
-  } while (counter !== 3);
+  const x = getRandom();
+  const cliAnswer = even(x);
+  let rightAnswer;
+  if (x % 2 === 0) {
+    rightAnswer = 'yes';
+  } else {
+    rightAnswer = 'no';
+  }
+  if (rightAnswer !== cliAnswer) {
+    wrongAnswer(rightAnswer, cliAnswer);
+    return 0;
+  }
   return 1;
 };
 
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
-if (brainEven() === 1) {
-  console.log(`Congratulations, ${name}!`);
-}
+export default brainEven;

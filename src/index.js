@@ -1,29 +1,46 @@
 import * as Say from "../src/cli.js";
 import brainCalc from "../src/brain-calc(s).js";
+import brainPrime from "../src/brain-prime(s).js";
+import brainGcd from "../src/brain-gcd(s).js";
+import brainProgression from "../src/brain-progression(s).js";
+import brainEven from "../src/brain-even(s).js";
 
 const index = (game) => {
   Say.welcome();
   const name = Say.greating();
   Say.condition(game);
   let counter = 0;
+  let answer = 1;
   do {
     switch (game) {
-      case calc:
-        brainCalc
+      case 'calc':
+        answer = brainCalc();
         break;
-      case even:
+      case 'even':
+        answer = brainEven();
         break;
-      case gcd:
+      case 'gcd':
+        answer = brainGcd();
         break;
-      case progression:
+      case 'progression':
+        answer = brainProgression();
         break;
-      case prime:
+      case 'prime':
+        answer = brainPrime();
+        break;
+      case 'games':
+        return 0;
+        break;
+      default:
         break;
     };
-    if (rightAnswer !== cliAnswer) {
-      return cliAnswer;
+    if (answer === 0) {
+      return 0;
     }
+    counter += 1;
   } while (counter !== 3);
   Say.ending(name);
   return 1;
 }
+
+export default index;
