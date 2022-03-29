@@ -1,5 +1,4 @@
-import {wrongAnswer} from "../src/cli.js";
-import {even} from "../src/cli.js"
+import { wrongAnswer, even } from './cli.js';
 
 const getRandom = () => {
   const min = 1;

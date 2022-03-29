@@ -41,7 +41,7 @@ const index = (game) => {
     }
     counter += 1;
   } while (counter !== 3);
-  Say.ending(name);
+  Say.ending();
   return 1;
 };
 

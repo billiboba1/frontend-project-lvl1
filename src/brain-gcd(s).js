@@ -1,5 +1,4 @@
-import {wrongAnswer} from "../src/cli.js";
-import {gcd} from "../src/cli.js"
+import { wrongAnswer, gcd } from '../src/cli.js';
 
 const getRandom = () => {
   const min = 2;

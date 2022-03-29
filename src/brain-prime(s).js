@@ -1,5 +1,4 @@
-import {wrongAnswer} from "../src/cli.js";
-import {prime} from "../src/cli.js"
+import { wrongAnswer, prime } from "./cli.js";
 
 const getRandom = () => {
   const min = 2;
@@ -9,7 +8,7 @@ const getRandom = () => {
 
 const brainPrime = () => {
   const primeList = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43,
-    47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];  
+    47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
   let rightAnswer;
   const num = getRandom();
   const cliAnswer = prime(num);

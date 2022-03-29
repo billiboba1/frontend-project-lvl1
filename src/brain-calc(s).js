@@ -1,5 +1,4 @@
-import {calc} from "../src/cli.js"
-import {wrongAnswer} from "../src/cli.js";
+import { calc, wrongAnswer } from './cli.js';
 
 const getRandom = (max) => {
   const min = 1;
@@ -37,7 +36,7 @@ const brainCalc = () => {
   if (rightAnswer !== Number(cliAnswer)) {
     wrongAnswer(rightAnswer, cliAnswer);
     return 0;
-  } 
+  }
   return 1;
 };
 
