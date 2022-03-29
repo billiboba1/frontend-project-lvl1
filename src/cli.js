@@ -43,6 +43,8 @@ export const calc = (activity, firstNum, secondNum) => {
       return (readlineSync.question(`Question: ${firstNum} - ${secondNum}\nYour answer: `));
     case 2:
       return (readlineSync.question(`Question: ${firstNum} * ${secondNum}\nYour answer: `));
+    default:
+      break;
   }
   return 1;
 };
