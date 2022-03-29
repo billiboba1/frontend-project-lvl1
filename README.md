@@ -6,11 +6,14 @@
 
 
 to start the game you need: 
-1)write "make install" in console
 
-2)write "npm audit fix" in console
+1)write "make publish" in console
 
-3)write "brain-even/brain-calc/brain-gcd/brain-progression/brain-prime" in console, to play the games
+2)write "make install" in console
+
+3)write "npm audit fix" in console
+
+4)write "brain-even/brain-calc/brain-gcd/brain-progression/brain-prime" in console, to play the games
 
 
 
