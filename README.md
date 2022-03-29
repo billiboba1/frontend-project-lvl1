@@ -5,9 +5,10 @@
 [![Node CI](https://github.com/billiboba1/frontend-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/billiboba1/frontend-project-lvl1/actions/workflows/github-actions-demo.yml)
 
 
-to start the game you need:
-1)write "make install" in console 
-2)
+to start the game you need: 
+1)write "make install" in console
+2)write "npm audit fix" in console
+3)write "brain-even/brain-calc/brain-gcd/brain-progression/brain-prime" in console, to play the games
 
 brain-even: https://asciinema.org/a/zfG7jIVdrVtQd4MyBTIm0hKDa
 
