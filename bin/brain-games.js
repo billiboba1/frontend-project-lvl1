@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import greating from '../src/cli.js';
+import index from "../src/index.js";
 
-console.log('Welcome to the Brain Games!');
-const name = greating();
-console.log(`Hello, ${name}`);
+index('games');

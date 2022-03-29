@@ -12,6 +12,9 @@ const index = (game) => {
   let counter = 0;
   let answer = 1;
   do {
+    if (counter > 0) {
+      Say.correct();
+    }
     switch (game) {
       case 'calc':
         answer = brainCalc();
@@ -30,10 +33,9 @@ const index = (game) => {
         break;
       case 'games':
         return 0;
-        break;
       default:
         break;
-    };
+    }
     if (answer === 0) {
       return 0;
     }
@@ -41,6 +43,6 @@ const index = (game) => {
   } while (counter !== 3);
   Say.ending(name);
   return 1;
-}
+};
 
 export default index;

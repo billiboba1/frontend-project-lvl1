@@ -26,7 +26,7 @@ export const condition = (game) => {
       case prime:
         console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
         break;
-    };
+    }
 };
 
 export const gcd = (firstNum, secondNum) => readlineSync.question(`Question: ${firstNum} ${secondNum}\nYour answer: `);
@@ -52,7 +52,7 @@ export const wrongAnswer = (rightAnswer, cliAnswer) => {
   console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
 }
 
-export const ending = (name) => {
-  console.log(`Congratulations, ${name}!`);
-}
+export const ending = (name) => console.log(`Congratulations, ${name}!`);
 
+
+export const correct = () => console.log('Correct!');

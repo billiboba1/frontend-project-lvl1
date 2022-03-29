@@ -23,7 +23,6 @@ const brainProgression = () => {
     startNum += range;
   }
   const cliAnswer = progression(nums);
-  counter += 1;
   if (rightAnswer !== Number(cliAnswer)) {
     wrongAnswer(rightAnswer, cliAnswer);
     return 0;

@@ -4,6 +4,11 @@
 
 [![Node CI](https://github.com/billiboba1/frontend-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/billiboba1/frontend-project-lvl1/actions/workflows/github-actions-demo.yml)
 
+
+to start the game you need:
+1)write "make brain-games(brain-gcd/brain-calc/brain-progression/brain-even/brain-prime)" 
+2)
+
 brain-even: https://asciinema.org/a/zfG7jIVdrVtQd4MyBTIm0hKDa
 brain-calc: https://asciinema.org/a/SRyCrgKSjQlxAL8KQY1LUCZrX
 brain-gcd: https://asciinema.org/a/AWizqF8spZzfl8S86M4F9765x

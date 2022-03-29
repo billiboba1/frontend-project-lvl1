@@ -18,7 +18,6 @@ const brainPrime = () => {
   } else {
     rightAnswer = 'no';
   }
-  counter += 1;
   if (rightAnswer !== cliAnswer) {
     wrongAnswer(rightAnswer, cliAnswer);
     return 0;
