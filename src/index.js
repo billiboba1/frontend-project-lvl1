@@ -1,9 +1,9 @@
-import * as Say from "../src/cli.js";
-import brainCalc from "../src/brain-calc(s).js";
-import brainPrime from "../src/brain-prime(s).js";
-import brainGcd from "../src/brain-gcd(s).js";
-import brainProgression from "../src/brain-progression(s).js";
-import brainEven from "../src/brain-even(s).js";
+import * as Say from './cli.js';
+import brainCalc from './brain-calc(s).js';
+import brainPrime from './brain-prime(s).js';
+import brainGcd from './brain-gcd(s).js';
+import brainProgression from './brain-progression(s).js';
+import brainEven from './brain-even(s).js';
 
 const index = (game) => {
   Say.welcome();

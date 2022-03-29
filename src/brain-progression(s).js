@@ -1,4 +1,4 @@
-import { wrongAnswer, progression } from '../src/cli.js';
+import { wrongAnswer, progression } from './cli.js';
 
 const getRandom = (min, max) => Math.round(Math.random() * (max - min) + min);
 

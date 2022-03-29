@@ -1,4 +1,4 @@
-import { wrongAnswer, prime } from "./cli.js";
+import { wrongAnswer, prime } from './cli.js';
 
 const getRandom = () => {
   const min = 2;

@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const welcome = () => console.log('Welcome to the Brain Games!')
+export const welcome = () => console.log('Welcome to the Brain Games!');
 
 let name;
 export const greating = () => {
@@ -26,6 +26,8 @@ export const condition = (game) => {
     case 'prime':
       console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
       break;
+    default:
+      break;
   }
 };
 
@@ -36,13 +38,14 @@ export const even = (num) => readlineSync.question(`Question: ${num} \nYour answ
 export const calc = (activity, firstNum, secondNum) => {
   switch (activity) {
     case 0:
-      return(readlineSync.question(`Question: ${firstNum} + ${secondNum}\nYour answer: `));
+      return (readlineSync.question(`Question: ${firstNum} + ${secondNum}\nYour answer: `));
     case 1:
-      return(readlineSync.question(`Question: ${firstNum} - ${secondNum}\nYour answer: `));
+      return (readlineSync.question(`Question: ${firstNum} - ${secondNum}\nYour answer: `));
     case 2:
-      return(readlineSync.question(`Question: ${firstNum} * ${secondNum}\nYour answer: `));
+      return (readlineSync.question(`Question: ${firstNum} * ${secondNum}\nYour answer: `));
   }
-}
+  return 1;
+};
 
 export const progression = (nums) => readlineSync.question(`Question:${nums}\nYour answer: `);
 
@@ -50,7 +53,7 @@ export const prime = (num) => readlineSync.question(`Question: ${num}\nYour answ
 
 export const wrongAnswer = (rightAnswer, cliAnswer) => {
   console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
-}
+};
 
 export const ending = () => console.log(`Congratulations, ${name}!`);
 
