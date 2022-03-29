@@ -7,7 +7,7 @@ import brainEven from "../src/brain-even(s).js";
 
 const index = (game) => {
   Say.welcome();
-  const name = Say.greating();
+  Say.greating();
   Say.condition(game);
   let counter = 0;
   let answer = 1;
