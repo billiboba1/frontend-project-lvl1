@@ -7,8 +7,12 @@
 
 to start the game you need: 
 1)write "make install" in console
+
 2)write "npm audit fix" in console
+
 3)write "brain-even/brain-calc/brain-gcd/brain-progression/brain-prime" in console, to play the games
+
+
 
 brain-even: https://asciinema.org/a/zfG7jIVdrVtQd4MyBTIm0hKDa
 
