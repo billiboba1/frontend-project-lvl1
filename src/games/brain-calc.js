@@ -1,4 +1,4 @@
-import { calc, wrongAnswer, condition } from '../cli.js';
+import { calc, wrongAnswer } from '../cli.js';
 import index from '../index.js';
 import getRandom from '../utils.js';
 

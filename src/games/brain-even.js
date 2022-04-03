@@ -1,4 +1,4 @@
-import { wrongAnswer, even, condition } from '../cli.js';
+import { wrongAnswer, even } from '../cli.js';
 import index from '../index.js';
 import getRandom from '../utils.js';
 
