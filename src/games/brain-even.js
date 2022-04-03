@@ -1,13 +1,9 @@
-import { wrongAnswer, even } from './cli.js';
+import { wrongAnswer, even, condition } from './cli.js';
+import index from './index.js';
+import getRandom from '../utils.js';
 
-const getRandom = () => {
-  const min = 1;
-  const max = 100;
-  return Math.round(Math.random() * (max - min) + min);
-};
-
-const brainEven = () => {
-  const x = getRandom();
+const brainEvenLogic = () => {
+  const x = getRandom(1, 100);
   const cliAnswer = even(x);
   let rightAnswer;
   if (x % 2 === 0) {
@@ -21,5 +17,10 @@ const brainEven = () => {
   }
   return 1;
 };
+
+const brainEven = () => {
+  condition('even');
+  index(brainEvenLogic);
+}
 
 export default brainEven;

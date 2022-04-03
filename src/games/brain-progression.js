@@ -1,8 +1,8 @@
-import { wrongAnswer, progression } from './cli.js';
+import { wrongAnswer, progression, condition} from './cli.js';
+import index from './index.js';
+import getRandom from '../utils.js';
 
-const getRandom = (min, max) => Math.round(Math.random() * (max - min) + min);
-
-const brainProgression = () => {
+const brainProgressionLogic = () => {
   const totalNums = getRandom(5, 10);
   const randomNum = getRandom(0, totalNums - 1);
   const range = getRandom(1, 5);
@@ -28,5 +28,10 @@ const brainProgression = () => {
   }
   return 1;
 };
+
+const brainProgression = () => {
+  condition('progression');
+  index(brainProgressionLogic);
+}
 
 export default brainProgression;

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import index from '../src/index.js';
+import brainProgression from '../src/brainProgression.js';
 
-index('progression');
+brainProgression();

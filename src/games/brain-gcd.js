@@ -1,14 +1,10 @@
-import { wrongAnswer, gcd } from './cli.js';
+import { wrongAnswer, gcd, condition} from './cli.js';
+import index from './index.js';
+import getRandom from '../utils.js';
 
-const getRandom = () => {
-  const min = 2;
-  const max = 60;
-  return Math.round(Math.random() * (max - min) + min);
-};
-
-const brainGcd = () => {
-  const secondNum = getRandom();
-  const firstNum = getRandom();
+const brainGcdLogic = () => {
+  const secondNum = getRandom(2, 60);
+  const firstNum = getRandom(2, 60);
   let rightAnswer = Math.min(secondNum, firstNum);
   let forBreak = 0;
   const cliAnswer = gcd(firstNum, secondNum);
@@ -25,5 +21,10 @@ const brainGcd = () => {
   }
   return 1;
 };
+
+const brainGcd = () => {
+  condition('gcd');
+  index(brainGcdLogic);
+}
 
 export default brainGcd;

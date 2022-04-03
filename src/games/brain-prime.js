@@ -1,16 +1,12 @@
-import { wrongAnswer, prime } from './cli.js';
+import { wrongAnswer, prime, condition } from './cli.js';
+import index from './index.js';
+import getRandom from '../utils.js';
 
-const getRandom = () => {
-  const min = 2;
-  const max = 100;
-  return Math.round(Math.random() * (max - min) + min);
-};
-
-const brainPrime = () => {
+const brainPrimeLogic = () => {
   const primeList = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43,
     47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
   let rightAnswer;
-  const num = getRandom();
+  const num = getRandom(2, 100);
   const cliAnswer = prime(num);
   if (primeList.includes(num)) {
     rightAnswer = 'yes';
@@ -23,5 +19,10 @@ const brainPrime = () => {
   }
   return 1;
 };
+
+const brainPrime = () => {
+  condition('prime');
+  index(brainPrimeLogic);
+}
 
 export default brainPrime;

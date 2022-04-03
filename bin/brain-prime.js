@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import index from '../src/index.js';
+import brainPrime from '../src/brainPrime.js';
 
-index('prime');
+brainPrime();
