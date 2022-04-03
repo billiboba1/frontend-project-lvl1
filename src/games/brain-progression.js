@@ -31,6 +31,6 @@ const brainProgressionLogic = () => {
 
 const brainProgression = () => {
   index('progression', brainProgressionLogic);
-}
+};
 
 export default brainProgression;

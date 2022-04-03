@@ -39,6 +39,6 @@ const brainCalcLogic = () => {
 
 const brainCalc = () => {
   index('calc', brainCalcLogic);
-}
+};
 
 export default brainCalc;

@@ -24,6 +24,6 @@ const brainGcdLogic = () => {
 
 const brainGcd = () => {
   index('gcd', brainGcdLogic);
-}
+};
 
 export default brainGcd;

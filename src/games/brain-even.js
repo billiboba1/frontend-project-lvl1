@@ -20,6 +20,6 @@ const brainEvenLogic = () => {
 
 const brainEven = () => {
   index('even', brainEvenLogic);
-}
+};
 
 export default brainEven;

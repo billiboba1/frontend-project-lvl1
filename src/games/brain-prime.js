@@ -22,6 +22,6 @@ const brainPrimeLogic = () => {
 
 const brainPrime = () => {
   index('prime', brainPrimeLogic);
-}
+};
 
 export default brainPrime;
