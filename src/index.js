@@ -3,6 +3,7 @@ import * as Say from './cli.js';
 const index = (game, func) => {
   Say.welcome();
   Say.greating();
+  Say.condition(game);
   let answer = 1;
   for (let i = 0; i < 3; i += 1) {
     if (i > 0) {

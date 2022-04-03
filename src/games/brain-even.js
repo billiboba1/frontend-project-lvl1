@@ -1,5 +1,5 @@
-import { wrongAnswer, even, condition } from './cli.js';
-import index from './index.js';
+import { wrongAnswer, even, condition } from '../cli.js';
+import index from '../index.js';
 import getRandom from '../utils.js';
 
 const brainEvenLogic = () => {
@@ -19,8 +19,7 @@ const brainEvenLogic = () => {
 };
 
 const brainEven = () => {
-  condition('even');
-  index(brainEvenLogic);
+  index('even', brainEvenLogic);
 }
 
 export default brainEven;

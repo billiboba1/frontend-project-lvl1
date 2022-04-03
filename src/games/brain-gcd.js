@@ -1,5 +1,5 @@
-import { wrongAnswer, gcd, condition} from './cli.js';
-import index from './index.js';
+import { wrongAnswer, gcd, condition} from '../cli.js';
+import index from '../index.js';
 import getRandom from '../utils.js';
 
 const brainGcdLogic = () => {
@@ -23,8 +23,7 @@ const brainGcdLogic = () => {
 };
 
 const brainGcd = () => {
-  condition('gcd');
-  index(brainGcdLogic);
+  index('gcd', brainGcdLogic);
 }
 
 export default brainGcd;

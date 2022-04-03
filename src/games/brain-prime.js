@@ -1,5 +1,5 @@
-import { wrongAnswer, prime, condition } from './cli.js';
-import index from './index.js';
+import { wrongAnswer, prime, condition } from '../cli.js';
+import index from '../index.js';
 import getRandom from '../utils.js';
 
 const brainPrimeLogic = () => {
@@ -21,8 +21,7 @@ const brainPrimeLogic = () => {
 };
 
 const brainPrime = () => {
-  condition('prime');
-  index(brainPrimeLogic);
+  index('prime', brainPrimeLogic);
 }
 
 export default brainPrime;

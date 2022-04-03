@@ -1,5 +1,5 @@
-import { calc, wrongAnswer, condition } from './cli.js';
-import index from './index.js';
+import { calc, wrongAnswer, condition } from '../cli.js';
+import index from '../index.js';
 import getRandom from '../utils.js';
 
 const brainCalcLogic = () => {
@@ -38,8 +38,7 @@ const brainCalcLogic = () => {
 };
 
 const brainCalc = () => {
-  condition('calc');
-  index(brainCalcLogic);
+  index('calc', brainCalcLogic);
 }
 
 export default brainCalc;
