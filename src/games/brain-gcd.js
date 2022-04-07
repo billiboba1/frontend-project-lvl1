@@ -1,6 +1,6 @@
+import readlineSync from 'readline-sync';
 import index from '../index.js';
 import { getRandom } from '../utils.js';
-import readlineSync from 'readline-sync';
 
 const brainGcdLogic = (name) => {
   const secondNum = getRandom(2, 60);

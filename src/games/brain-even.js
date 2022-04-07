@@ -1,6 +1,6 @@
+import readlineSync from 'readline-sync';
 import index from '../index.js';
 import { getRandom } from '../utils.js';
-import readlineSync from 'readline-sync';
 
 const brainEvenLogic = (name) => {
   const num = getRandom(1, 100);
