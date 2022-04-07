@@ -1,8 +1,8 @@
-import { calc, wrongAnswer } from '../cli.js';
 import index from '../index.js';
-import getRandom from '../utils.js';
+import { getRandom } from '../utils.js';
+import readlineSync from 'readline-sync';
 
-const brainCalcLogic = () => {
+const brainCalcLogic = (name) => {
   const question = getRandom(0.5, 3.49);
   let rightAnswer;
   let firstNum;
@@ -13,32 +13,32 @@ const brainCalcLogic = () => {
       firstNum = getRandom(1, 100);
       secondNum = getRandom(1, 100);
       rightAnswer = firstNum + secondNum;
-      cliAnswer = calc(0, firstNum, secondNum);
+      cliAnswer = readlineSync.question(`Question: ${firstNum} + ${secondNum}\nYour answer: `);
       break;
     case 2:
       firstNum = getRandom(1, 100);
       secondNum = getRandom(1, 100);
       rightAnswer = firstNum - secondNum;
-      cliAnswer = calc(1, firstNum, secondNum);
+      cliAnswer = readlineSync.question(`Question: ${firstNum} - ${secondNum}\nYour answer: `);
       break;
     case 3:
       firstNum = getRandom(1, 10);
       secondNum = getRandom(1, 20);
       rightAnswer = firstNum * secondNum;
-      cliAnswer = calc(2, firstNum, secondNum);
+      cliAnswer = readlineSync.question(`Question: ${firstNum} * ${secondNum}\nYour answer: `);
       break;
     default:
       break;
   }
   if (rightAnswer !== Number(cliAnswer)) {
-    wrongAnswer(rightAnswer, cliAnswer);
+    console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
     return 0;
   }
   return 1;
 };
 
 const brainCalc = () => {
-  index('calc', brainCalcLogic);
+  index('What is the result of the expression?', brainCalcLogic);
 };
 
 export default brainCalc;

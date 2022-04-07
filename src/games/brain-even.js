@@ -1,25 +1,25 @@
-import { wrongAnswer, even } from '../cli.js';
 import index from '../index.js';
-import getRandom from '../utils.js';
+import { getRandom } from '../utils.js';
+import readlineSync from 'readline-sync';
 
-const brainEvenLogic = () => {
-  const x = getRandom(1, 100);
-  const cliAnswer = even(x);
+const brainEvenLogic = (name) => {
+  const num = getRandom(1, 100);
+  const cliAnswer = readlineSync.question(`Question: ${num} \nYour answer: `);
   let rightAnswer;
-  if (x % 2 === 0) {
+  if (num % 2 === 0) {
     rightAnswer = 'yes';
   } else {
     rightAnswer = 'no';
   }
   if (rightAnswer !== cliAnswer) {
-    wrongAnswer(rightAnswer, cliAnswer);
+    console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
     return 0;
   }
   return 1;
 };
 
 const brainEven = () => {
-  index('even', brainEvenLogic);
+  index('Answer "yes" if the number is even, otherwise answer "no".', brainEvenLogic);
 };
 
 export default brainEven;

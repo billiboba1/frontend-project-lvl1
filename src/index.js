@@ -1,20 +1,19 @@
 import * as Say from './cli.js';
 
 const index = (game, func) => {
-  Say.welcome();
-  Say.greating();
-  Say.condition(game);
+  const name = Say.greating();
+  console.log(game);
   let answer = 1;
   for (let i = 0; i < 3; i += 1) {
     if (i > 0) {
-      Say.correct();
+      console.log('Correct!')
     }
-    answer = func();
+    answer = func(name);
     if (answer === 0) {
       return 0;
     }
   }
-  Say.ending();
+  console.log(`Congratulations, ${name}!`);
   return 1;
 };
 
