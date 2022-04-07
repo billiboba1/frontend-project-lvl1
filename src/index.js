@@ -1,7 +1,7 @@
-import * as Say from './cli.js';
+import greating from './cli.js';
 
 const index = (game, func) => {
-  const name = Say.greating();
+  const name = greating();
   console.log(game);
   let answer = 1;
   for (let i = 0; i < 3; i += 1) {
