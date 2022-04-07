@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import index from '../index.js';
-import { getRandom } from '../utils.js';
+import getRandom from '../utils.js';
 
 const brainCalcLogic = (name) => {
   const question = getRandom(0.5, 3.49);

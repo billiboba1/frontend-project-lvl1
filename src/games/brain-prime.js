@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import index from '../index.js';
-import { getRandom } from '../utils.js';
+import getRandom from '../utils.js';
 
 const brainPrimeLogic = (name) => {
   const primeList = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43,

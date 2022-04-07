@@ -6,7 +6,7 @@ const index = (game, func) => {
   let answer = 1;
   for (let i = 0; i < 3; i += 1) {
     if (i > 0) {
-      console.log('Correct!')
+      console.log('Correct!');
     }
     answer = func(name);
     if (answer === 0) {
