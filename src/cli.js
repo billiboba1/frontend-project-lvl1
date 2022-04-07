@@ -7,7 +7,3 @@ export const greating = () => {
   console.log(`Hello, ${name}`);
   return (name);
 };
-
-export const ending = () => console.log(`Congratulations, ${name}!`);
-
-export const correct = () => console.log('Correct!');
