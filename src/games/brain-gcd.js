@@ -1,29 +1,31 @@
 import readlineSync from 'readline-sync';
 import index from '../index.js';
+import { getAnswer } from '../index.js';
 import getRandom from '../utils.js';
 
-const brainGcdLogic = (name) => {
-  const secondNum = getRandom(2, 60);
-  const firstNum = getRandom(2, 60);
-  let rightAnswer = Math.min(secondNum, firstNum);
+const getRightAnswer = (firstNum, secondNum) => {
   let forBreak = 0;
-  const cliAnswer = readlineSync.question(`Question: ${firstNum} ${secondNum}\nYour answer: `);
+  let rightAnswer = Math.min(secondNum, firstNum);
   while (forBreak === 0) {
     if ((firstNum % rightAnswer === 0) && (secondNum % rightAnswer === 0)) {
-      forBreak = 1;
+      return rightAnswer;
     } else {
       rightAnswer -= 1;
     }
   }
-  if (rightAnswer !== Number(cliAnswer)) {
-    console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
-    return 0;
-  }
-  return 1;
+};
+
+const brainGcdLogic = (name) => {
+  const secondNum = getRandom(2, 60);
+  const firstNum = getRandom(2, 60);
+  const question = `Question: ${firstNum} ${secondNum}\nYour answer: `;
+  const rightAnswer = getRightAnswer(firstNum, secondNum);
+  return getAnswer(rightAnswer, question);
 };
 
 const brainGcd = () => {
-  index('Find the greatest common divisor of given numbers.', brainGcdLogic);
+  const condition = 'Find the greatest common divisor of given numbers.';
+  index(condition, brainGcdLogic);
 };
 
 export default brainGcd;

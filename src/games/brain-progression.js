@@ -1,5 +1,6 @@
-import readlineSync from 'readline-sync';
+import readlineSync, { question } from 'readline-sync';
 import index from '../index.js';
+import { getAnswer } from '../index.js';
 import getRandom from '../utils.js';
 
 const brainProgressionLogic = (name) => {
@@ -21,16 +22,13 @@ const brainProgressionLogic = (name) => {
     }
     startNum += range;
   }
-  const cliAnswer = readlineSync.question(`Question:${nums}\nYour answer: `);
-  if (rightAnswer !== Number(cliAnswer)) {
-    console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
-    return 0;
-  }
-  return 1;
+  const question = `Question:${nums}\nYour answer: `;
+  return getAnswer(rightAnswer, question);
 };
 
 const brainProgression = () => {
-  index('What number is missing in the progression?', brainProgressionLogic);
+  const condition = 'What number is missing in the progression?';
+  index(condition, brainProgressionLogic);
 };
 
 export default brainProgression;

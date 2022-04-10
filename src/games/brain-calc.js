@@ -1,44 +1,30 @@
 import readlineSync from 'readline-sync';
 import index from '../index.js';
+import { getAnswer } from '../index.js';
 import getRandom from '../utils.js';
 
 const brainCalcLogic = (name) => {
-  const question = getRandom(0.5, 3.49);
+  const wholeSigns = ['+', '-', '*'];
+  const sign = wholeSigns[getRandom(0.5, 3.49) - 1];
   let rightAnswer;
   let firstNum;
   let secondNum;
-  let cliAnswer;
-  switch (question) {
-    case 1:
-      firstNum = getRandom(1, 100);
-      secondNum = getRandom(1, 100);
-      rightAnswer = firstNum + secondNum;
-      cliAnswer = readlineSync.question(`Question: ${firstNum} + ${secondNum}\nYour answer: `);
-      break;
-    case 2:
-      firstNum = getRandom(1, 100);
-      secondNum = getRandom(1, 100);
-      rightAnswer = firstNum - secondNum;
-      cliAnswer = readlineSync.question(`Question: ${firstNum} - ${secondNum}\nYour answer: `);
-      break;
-    case 3:
-      firstNum = getRandom(1, 10);
-      secondNum = getRandom(1, 20);
-      rightAnswer = firstNum * secondNum;
-      cliAnswer = readlineSync.question(`Question: ${firstNum} * ${secondNum}\nYour answer: `);
-      break;
-    default:
-      break;
+  if (sign === '+' || sign === '-') {
+    firstNum = getRandom(1, 100);
+    secondNum = getRandom (1, 100);
+    sign === '+' ? rightAnswer = firstNum + secondNum : rightAnswer = firstNum - secondNum;
+  } else {
+    firstNum = getRandom(1, 20);
+    secondNum = getRandom(1, 10);
+    rightAnswer = firstNum * secondNum;
   }
-  if (rightAnswer !== Number(cliAnswer)) {
-    console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
-    return 0;
-  }
-  return 1;
+  const question = `Question: ${firstNum} ${sign} ${secondNum}\nYour answer: `;
+  return getAnswer(rightAnswer, question);
 };
 
 const brainCalc = () => {
-  index('What is the result of the expression?', brainCalcLogic);
+  const condition = 'What is the result of the expression?';
+  index(condition, brainCalcLogic);
 };
 
 export default brainCalc;
