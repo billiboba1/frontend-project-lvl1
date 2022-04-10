@@ -3,7 +3,8 @@ import getRandom from '../utils.js';
 
 const getRightAnswer = (firstNum, secondNum) => {
   let rightAnswer = Math.min(secondNum, firstNum);
-  while (true) {
+  const forWhile = true;
+  while (forWhile) {
     if ((firstNum % rightAnswer === 0) && (secondNum % rightAnswer === 0)) {
       return rightAnswer;
     }
