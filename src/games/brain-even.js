@@ -4,8 +4,7 @@ import getRandom from '../utils.js';
 const brainEvenLogic = () => {
   const num = getRandom(1, 100);
   const question = `Question: ${num} \nYour answer: `;
-  let rightAnswer;
-  rightAnswer = num % 2 === 0 ? 'yes' : 'no';
+  const rightAnswer = num % 2 === 0 ? 'yes' : 'no';
   return getAnswer(rightAnswer, question);
 };
 
