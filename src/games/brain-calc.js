@@ -1,9 +1,7 @@
-import readlineSync from 'readline-sync';
-import index from '../index.js';
-import { getAnswer } from '../index.js';
+import { index, getAnswer } from '../index.js';
 import getRandom from '../utils.js';
 
-const brainCalcLogic = (name) => {
+const brainCalcLogic = () => {
   const wholeSigns = ['+', '-', '*'];
   const sign = wholeSigns[getRandom(0.5, 3.49) - 1];
   let rightAnswer;
@@ -12,7 +10,7 @@ const brainCalcLogic = (name) => {
   if (sign === '+' || sign === '-') {
     firstNum = getRandom(1, 100);
     secondNum = getRandom (1, 100);
-    sign === '+' ? rightAnswer = firstNum + secondNum : rightAnswer = firstNum - secondNum;
+    sign === '+'? rightAnswer = firstNum + secondNum : rightAnswer = firstNum - secondNum;
   } else {
     firstNum = getRandom(1, 20);
     secondNum = getRandom(1, 10);

@@ -1,9 +1,7 @@
-import readlineSync from 'readline-sync';
-import index from '../index.js';
-import { getAnswer } from '../index.js';
+import { index, getAnswer } from '../index.js';
 import getRandom from '../utils.js';
 
-const brainEvenLogic = (name) => {
+const brainEvenLogic = () => {
   const num = getRandom(1, 100);
   const question = `Question: ${num} \nYour answer: `;
   let rightAnswer;

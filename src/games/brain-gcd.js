@@ -1,6 +1,4 @@
-import readlineSync from 'readline-sync';
-import index from '../index.js';
-import { getAnswer } from '../index.js';
+import { index, getAnswer } from '../index.js';
 import getRandom from '../utils.js';
 
 const getRightAnswer = (firstNum, secondNum) => {
@@ -15,7 +13,7 @@ const getRightAnswer = (firstNum, secondNum) => {
   }
 };
 
-const brainGcdLogic = (name) => {
+const brainGcdLogic = () => {
   const secondNum = getRandom(2, 60);
   const firstNum = getRandom(2, 60);
   const question = `Question: ${firstNum} ${secondNum}\nYour answer: `;
