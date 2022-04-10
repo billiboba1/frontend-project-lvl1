@@ -2,15 +2,14 @@ import { index, getAnswer } from '../index.js';
 import getRandom from '../utils.js';
 
 const getRightAnswer = (firstNum, secondNum) => {
-  let forBreak = 0;
   let rightAnswer = Math.min(secondNum, firstNum);
-  while (forBreak === 0) {
+  while (true) {
     if ((firstNum % rightAnswer === 0) && (secondNum % rightAnswer === 0)) {
       return rightAnswer;
-    } else {
-      rightAnswer -= 1;
     }
+    rightAnswer -= 1;
   }
+  return 1;
 };
 
 const brainGcdLogic = () => {

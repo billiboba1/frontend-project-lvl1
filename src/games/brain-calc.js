@@ -9,8 +9,8 @@ const brainCalcLogic = () => {
   let secondNum;
   if (sign === '+' || sign === '-') {
     firstNum = getRandom(1, 100);
-    secondNum = getRandom (1, 100);
-    sign === '+'? rightAnswer = firstNum + secondNum : rightAnswer = firstNum - secondNum;
+    secondNum = getRandom(1, 100);
+    rightAnswer = sign === '+' ? firstNum + secondNum : firstNum - secondNum;
   } else {
     firstNum = getRandom(1, 20);
     secondNum = getRandom(1, 10);

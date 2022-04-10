@@ -5,7 +5,7 @@ const brainEvenLogic = () => {
   const num = getRandom(1, 100);
   const question = `Question: ${num} \nYour answer: `;
   let rightAnswer;
-  num % 2 === 0 ? rightAnswer = 'yes' : rightAnswer = 'no';
+  rightAnswer = num % 2 === 0 ? 'yes' : 'no';
   return getAnswer(rightAnswer, question);
 };
 
