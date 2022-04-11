@@ -29,9 +29,9 @@ export const mainLogic = (condition, gameLogic) => {
     }
     answer = gameLogic();
     if (!answer) {
-      return;
+      return false;
     }
   }
   console.log(`Congratulations, ${name}!`);
-  return;
+  return true;
 };
