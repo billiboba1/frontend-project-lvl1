@@ -18,7 +18,7 @@ export const getAnswer = (rightAnswer, question) => {
   return true;
 };
 
-export const index = (condition, gameLogic) => {
+export const mainLogic = (condition, gameLogic) => {
   name = greating();
   console.log(condition);
   let answer = true;
@@ -28,8 +28,8 @@ export const index = (condition, gameLogic) => {
       console.log('Correct!');
     }
     answer = gameLogic();
-    if (answer === false) {
-      return false;
+    if (!answer) {
+      return;
     }
   }
   console.log(`Congratulations, ${name}!`);

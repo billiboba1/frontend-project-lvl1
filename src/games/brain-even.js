@@ -1,4 +1,4 @@
-import { index, getAnswer } from '../index.js';
+import { mainLogic, getAnswer } from '../index.js';
 import getRandom from '../utils.js';
 
 const brainEvenLogic = () => {
@@ -10,7 +10,7 @@ const brainEvenLogic = () => {
 
 const brainEven = () => {
   const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
-  index(condition, brainEvenLogic);
+  mainLogic(condition, brainEvenLogic);
 };
 
 export default brainEven;

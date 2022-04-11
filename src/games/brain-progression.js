@@ -1,4 +1,4 @@
-import { index, getAnswer } from '../index.js';
+import { mainLogic, getAnswer } from '../index.js';
 import getRandom from '../utils.js';
 
 const brainProgressionLogic = () => {
@@ -25,7 +25,7 @@ const brainProgressionLogic = () => {
 
 const brainProgression = () => {
   const condition = 'What number is missing in the progression?';
-  index(condition, brainProgressionLogic);
+  mainLogic(condition, brainProgressionLogic);
 };
 
 export default brainProgression;
