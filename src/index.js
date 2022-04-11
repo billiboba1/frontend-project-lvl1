@@ -33,5 +33,5 @@ export const mainLogic = (condition, gameLogic) => {
     }
   }
   console.log(`Congratulations, ${name}!`);
-  return true;
+  return;
 };
