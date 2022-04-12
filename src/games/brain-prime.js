@@ -11,16 +11,16 @@ const primeOrNot = (num) => {
   return 'yes';
 };
 
-const brainPrimeLogic = () => {
+const giveBrainPrimeLogic = (name) => {
   const num = getRandom(2, 100);
   const question = `Question: ${num}\nYour answer: `;
   const rightAnswer = primeOrNot(num);
-  return getAnswer(rightAnswer, question);
+  return getAnswer(rightAnswer, question, name);
 };
 
-const brainPrime = () => {
+const startBrainPrime = () => {
   const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  mainLogic(condition, brainPrimeLogic);
+  mainLogic(condition, giveBrainPrimeLogic);
 };
 
-export default brainPrime;
+export default startBrainPrime;

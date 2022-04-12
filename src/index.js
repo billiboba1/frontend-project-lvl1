@@ -1,15 +1,6 @@
 import readlineSync from 'readline-sync';
 
-let name;
-
-const greating = () => {
-  console.log('Welcome to the Brain consitions!');
-  name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}`);
-  return (name);
-};
-
-export const getAnswer = (rightAnswer, question) => {
+export const getAnswer = (rightAnswer, question, name) => {
   const cliAnswer = readlineSync.question(question);
   if (String(rightAnswer) !== cliAnswer) {
     console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
@@ -18,8 +9,10 @@ export const getAnswer = (rightAnswer, question) => {
   return true;
 };
 
-export const mainLogic = (condition, gameLogic) => {
-  name = greating();
+export const mainLogic = (condition, givenGameLogic) => {
+  console.log('Welcome to the Brain consitions!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}`);
   console.log(condition);
   let answer = true;
   const totalRounds = 3;
@@ -27,11 +20,13 @@ export const mainLogic = (condition, gameLogic) => {
     if (i > 0) {
       console.log('Correct!');
     }
-    answer = gameLogic();
+    answer = givenGameLogic(name);
     if (!answer) {
-      return false;
+      break;
     }
   }
-  console.log(`Congratulations, ${name}!`);
+  if (answer) {
+    console.log(`Congratulations, ${name}!`) ;
+  }
   return true;
 };

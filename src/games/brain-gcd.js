@@ -13,17 +13,17 @@ const getGcd = (firstNum, secondNum) => {
   return 1;
 };
 
-const brainGcdLogic = () => {
+const giveBrainGcdLogic = (name) => {
   const secondNum = getRandom(2, 60);
   const firstNum = getRandom(2, 60);
   const question = `Question: ${firstNum} ${secondNum}\nYour answer: `;
   const rightAnswer = getGcd(firstNum, secondNum);
-  return getAnswer(rightAnswer, question);
+  return getAnswer(rightAnswer, question, name);
 };
 
-const brainGcd = () => {
+const startBrainGcd = () => {
   const condition = 'Find the greatest common divisor of given numbers.';
-  mainLogic(condition, brainGcdLogic);
+  mainLogic(condition, giveBrainGcdLogic);
 };
 
-export default brainGcd;
+export default startBrainGcd;
