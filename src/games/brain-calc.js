@@ -5,10 +5,8 @@ const giveBrainCalcLogic = (name) => {
   const wholeSigns = ['+', '-', '*'];
   const sign = wholeSigns[getRandom(0, 3)];
   let rightAnswer;
-  let firstNumber;
-  let secondNumber;
-  firstNumber = getRandom(1, 100);
-  secondNumber = getRandom(1, 100);
+  const firstNumber = getRandom(1, 100);
+  const secondNumber = getRandom(1, 100);
   switch (sign) {
     case '*':
       rightAnswer = firstNumber * secondNumber;

@@ -26,7 +26,7 @@ export const mainLogic = (condition, givenGameLogic) => {
     }
   }
   if (answer) {
-    console.log(`Congratulations, ${name}!`) ;
+    console.log(`Congratulations, ${name}!`);
   }
   return true;
 };
