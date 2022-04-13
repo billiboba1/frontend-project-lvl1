@@ -18,12 +18,12 @@ to start the game you need:
 
 
 
-brain-even: https://asciinema.org/a/zfG7jIVdrVtQd4MyBTIm0hKDa
+brain-even: https://asciinema.org/a/B8wQc8lx7KvLGyghZM4DmBKyV
 
-brain-calc: https://asciinema.org/a/SRyCrgKSjQlxAL8KQY1LUCZrX
+brain-calc: https://asciinema.org/a/aVjAcueOrenCLb7kIk7P6Sbl8
 
-brain-gcd: https://asciinema.org/a/AWizqF8spZzfl8S86M4F9765x
+brain-gcd: https://asciinema.org/a/Hb1NepWZmArUIGlTYk338IdFD
 
-brain-progression: https://asciinema.org/a/2LEDiB0flDNdvAFGDDdTDw9lz
+brain-progression: https://asciinema.org/a/kG5t31rCLy0z8sJjPzCxf96rf
 
-brain-prime: https://asciinema.org/a/tavjtb08BODUCXEUDAus03Hc6
+brain-prime: https://asciinema.org/a/XqXXNb6Yc6yvnMb8TTIbsmJZu

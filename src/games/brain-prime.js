@@ -11,7 +11,7 @@ const primeOrNot = (number) => {
   return 'yes';
 };
 
-const giveBrainPrimeLogic = (name, forGettingAnswer) => {
+const giveBrainPrimeLogic = (name) => {
   const number = getRandom(2, 100);
   const giveNeedingParameters = {};
   giveNeedingParameters.question = `Question: ${number}\nYour answer: `;

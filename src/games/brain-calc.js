@@ -1,7 +1,7 @@
 import startMainLogic from '../index.js';
 import getRandom from '../utils.js';
 
-const giveBrainCalcLogic = (name, forGettingAnswer) => {
+const giveBrainCalcLogic = (name) => {
   const wholeSigns = ['+', '-', '*'];
   const giveNeedingParameters = {};
   const sign = wholeSigns[getRandom(0, 3)];
