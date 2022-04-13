@@ -1,4 +1,4 @@
-import { mainLogic, getAnswer } from '../index.js';
+import startMainLogic from '../index.js';
 import getRandom from '../utils.js';
 
 const primeOrNot = (number) => {
@@ -11,16 +11,16 @@ const primeOrNot = (number) => {
   return 'yes';
 };
 
-const giveBrainPrimeLogic = (name) => {
+const giveBrainPrimeLogic = (name, forGettingAnswer) => {
   const number = getRandom(2, 100);
-  const question = `Question: ${number}\nYour answer: `;
-  const rightAnswer = primeOrNot(number);
-  return getAnswer(rightAnswer, question, name);
+  forGettingAnswer['question'] = `Question: ${number}\nYour answer: `;
+  forGettingAnswer['rightAnswer'] = primeOrNot(number);
+  return;
 };
 
 const startBrainPrime = () => {
   const condition = 'Answer "yes" if given numberber is prime. Otherwise answer "no".';
-  mainLogic(condition, giveBrainPrimeLogic);
+  startMainLogic(condition, giveBrainPrimeLogic);
 };
 
 export default startBrainPrime;

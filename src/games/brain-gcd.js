@@ -1,4 +1,4 @@
-import { mainLogic, getAnswer } from '../index.js';
+import startMainLogic from '../index.js';
 import getRandom from '../utils.js';
 
 const getGcd = (firstNumber, secondNumber) => {
@@ -13,17 +13,17 @@ const getGcd = (firstNumber, secondNumber) => {
   return 1;
 };
 
-const giveBrainGcdLogic = (name) => {
+const giveBrainGcdLogic = (name, forGettingAnswer) => {
   const secondNumber = getRandom(2, 60);
   const firstNumber = getRandom(2, 60);
-  const question = `Question: ${firstNumber} ${secondNumber}\nYour answer: `;
-  const rightAnswer = getGcd(firstNumber, secondNumber);
-  return getAnswer(rightAnswer, question, name);
+  forGettingAnswer['question'] = `Question: ${firstNumber} ${secondNumber}\nYour answer: `;
+  forGettingAnswer['rightAnswer'] = getGcd(firstNumber, secondNumber);
+  return;
 };
 
 const startBrainGcd = () => {
   const condition = 'Find the greatest common divisor of given Numberbers.';
-  mainLogic(condition, giveBrainGcdLogic);
+  startMainLogic(condition, giveBrainGcdLogic);
 };
 
 export default startBrainGcd;

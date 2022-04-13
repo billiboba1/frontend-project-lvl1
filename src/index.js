@@ -1,15 +1,7 @@
 import readlineSync from 'readline-sync';
 
-export const getAnswer = (rightAnswer, question, name) => {
-  const cliAnswer = readlineSync.question(question);
-  if (String(rightAnswer) !== cliAnswer) {
-    console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
-    return false;
-  }
-  return true;
-};
-
-export const mainLogic = (condition, givenGameLogic) => {
+const startMainLogic = (condition, givenGameLogic) => {
+  const forGettingAnswer = { question : '', rightAnswer: 0};
   console.log('Welcome to the Brain consitions!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}`);
@@ -20,7 +12,14 @@ export const mainLogic = (condition, givenGameLogic) => {
     if (i > 0) {
       console.log('Correct!');
     }
-    answer = givenGameLogic(name);
+    givenGameLogic(name, forGettingAnswer);
+    const cliAnswer = readlineSync.question(forGettingAnswer.question);
+    const { rightAnswer } = forGettingAnswer;
+    if (String(forGettingAnswer.rightAnswer) !== cliAnswer) {
+      console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`
+      + `\nLet's try again, ${name}!`);
+      answer = false;
+    }
     if (!answer) {
       break;
     }
@@ -30,3 +29,5 @@ export const mainLogic = (condition, givenGameLogic) => {
   }
   return true;
 };
+
+export default startMainLogic;
