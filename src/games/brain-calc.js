@@ -3,24 +3,25 @@ import getRandom from '../utils.js';
 
 const giveBrainCalcLogic = (name, forGettingAnswer) => {
   const wholeSigns = ['+', '-', '*'];
+  const giveNeedingParameters = {};
   const sign = wholeSigns[getRandom(0, 3)];
   const firstNumber = getRandom(1, 100);
   const secondNumber = getRandom(1, 100);
   switch (sign) {
     case '*':
-      forGettingAnswer['rightAnswer'] = firstNumber * secondNumber;
+      giveNeedingParameters.rightAnswer = firstNumber * secondNumber;
       break;
     case '+':
-      forGettingAnswer['rightAnswer'] = firstNumber + secondNumber;
+      giveNeedingParameters.rightAnswer = firstNumber + secondNumber;
       break;
     case '-':
-      forGettingAnswer['rightAnswer'] = firstNumber - secondNumber;
+      giveNeedingParameters.rightAnswer = firstNumber - secondNumber;
       break;
     default:
       break;
   }
-  forGettingAnswer['question'] = `Question: ${firstNumber} ${sign} ${secondNumber}\nYour answer: `;
-  return;
+  giveNeedingParameters.question = `Question: ${firstNumber} ${sign} ${secondNumber}\nYour answer: `;
+  return giveNeedingParameters;
 };
 
 const startBrainCalc = () => {

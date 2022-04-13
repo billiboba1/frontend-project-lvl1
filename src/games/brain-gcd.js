@@ -3,6 +3,7 @@ import getRandom from '../utils.js';
 
 const getGcd = (firstNumber, secondNumber) => {
   let rightAnswer = Math.min(secondNumber, firstNumber);
+  const giveNeedingParameters = {};
   const forWhile = true;
   while (forWhile) {
     if ((firstNumber % rightAnswer === 0) && (secondNumber % rightAnswer === 0)) {
@@ -16,9 +17,9 @@ const getGcd = (firstNumber, secondNumber) => {
 const giveBrainGcdLogic = (name, forGettingAnswer) => {
   const secondNumber = getRandom(2, 60);
   const firstNumber = getRandom(2, 60);
-  forGettingAnswer['question'] = `Question: ${firstNumber} ${secondNumber}\nYour answer: `;
-  forGettingAnswer['rightAnswer'] = getGcd(firstNumber, secondNumber);
-  return;
+  giveNeedingParameters.question = `Question: ${firstNumber} ${secondNumber}\nYour answer: `;
+  giveNeedingParameters.rightAnswer = getGcd(firstNumber, secondNumber);
+  return giveNeedingParameters;
 };
 
 const startBrainGcd = () => {

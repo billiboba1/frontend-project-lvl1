@@ -3,9 +3,10 @@ import getRandom from '../utils.js';
 
 const giveBrainEvenLogic = (name, forGettingAnswer) => {
   const number = getRandom(1, 100);
-  forGettingAnswer['question'] = `Question: ${number} \nYour answer: `;
-  forGettingAnswer['rightAnswer'] = number % 2 === 0 ? 'yes' : 'no';
-  return;
+  const giveNeedingParameters = {};
+  giveNeedingParameters.question = `Question: ${number} \nYour answer: `;
+  giveNeedingParameters.rightAnswer = number % 2 === 0 ? 'yes' : 'no';
+  return giveNeedingParameters;
 };
 
 const startBrainEven = () => {

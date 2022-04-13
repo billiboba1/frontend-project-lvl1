@@ -13,9 +13,10 @@ const primeOrNot = (number) => {
 
 const giveBrainPrimeLogic = (name, forGettingAnswer) => {
   const number = getRandom(2, 100);
-  forGettingAnswer['question'] = `Question: ${number}\nYour answer: `;
-  forGettingAnswer['rightAnswer'] = primeOrNot(number);
-  return;
+  const giveNeedingParameters = {};
+  giveNeedingParameters.question = `Question: ${number}\nYour answer: `;
+  giveNeedingParameters.rightAnswer = primeOrNot(number);
+  return giveNeedingParameters;
 };
 
 const startBrainPrime = () => {
