@@ -1,7 +1,7 @@
 import startMainLogic from '../index.js';
 import getRandom from '../utils.js';
 
-const giveBrainProgressionLogic = (name) => {
+const giveBrainProgressionLogic = () => {
   const totalNumbers = getRandom(5, 10);
   const hiddenNumber = getRandom(0, totalNumbers - 1);
   const rangeOfStep = getRandom(1, 5);

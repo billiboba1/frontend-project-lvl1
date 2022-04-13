@@ -13,7 +13,7 @@ const getGcd = (firstNumber, secondNumber) => {
   return 1;
 };
 
-const giveBrainGcdLogic = (name) => {
+const giveBrainGcdLogic = () => {
   const giveNeedingParameters = {};
   const secondNumber = getRandom(2, 60);
   const firstNumber = getRandom(2, 60);

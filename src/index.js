@@ -11,7 +11,7 @@ const startMainLogic = (condition, givenGameLogic) => {
     if (i > 0) {
       console.log('Correct!');
     }
-    const { rightAnswer, question } = givenGameLogic(name);
+    const { rightAnswer, question } = givenGameLogic();
     const cliAnswer = readlineSync.question(question);
     if (String(rightAnswer) !== cliAnswer) {
       console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`

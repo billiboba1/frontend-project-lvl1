@@ -1,7 +1,7 @@
 import startMainLogic from '../index.js';
 import getRandom from '../utils.js';
 
-const giveBrainEvenLogic = (name) => {
+const giveBrainEvenLogic = () => {
   const number = getRandom(1, 100);
   const giveNeedingParameters = {};
   giveNeedingParameters.question = `Question: ${number} \nYour answer: `;
