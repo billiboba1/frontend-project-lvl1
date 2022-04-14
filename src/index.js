@@ -22,7 +22,7 @@ const startMainLogic = (condition, givenGameLogic) => {
   }
   if (answer) {
     console.log(`Congratulations, ${name}!`);
-  }
+  }  //хотелось бы сказать спасибо за проделанную работу!
 };
 
 export default startMainLogic;
