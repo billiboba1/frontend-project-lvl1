@@ -17,15 +17,12 @@ const startMainLogic = (condition, givenGameLogic) => {
       console.log(`'${cliAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`
       + `\nLet's try again, ${name}!`);
       answer = false;
-    }
-    if (!answer) {
       break;
     }
   }
   if (answer) {
     console.log(`Congratulations, ${name}!`);
   }
-  return true;
 };
 
 export default startMainLogic;
