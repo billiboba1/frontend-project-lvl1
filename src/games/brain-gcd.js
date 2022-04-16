@@ -1,8 +1,7 @@
 import startMainLogic from '../index.js';
 import getRandom from '../utils.js';
 
-const getGcd = (firstNumber, secondNumber) => {
-  let rightAnswer = Math.min(secondNumber, firstNumber);
+const getGcd = (firstNumber, secondNumber, rightAnswer) => {
   const forWhile = true;
   while (forWhile) {
     if ((firstNumber % rightAnswer === 0) && (secondNumber % rightAnswer === 0)) {
@@ -17,8 +16,9 @@ const giveBrainGcdLogic = () => {
   const giveNeedingParameters = {};
   const secondNumber = getRandom(2, 60);
   const firstNumber = getRandom(2, 60);
+  const rightAnswer = Math.min(secondNumber, firstNumber);
   giveNeedingParameters.question = `Question: ${firstNumber} ${secondNumber}\nYour answer: `;
-  giveNeedingParameters.rightAnswer = getGcd(firstNumber, secondNumber);
+  giveNeedingParameters.rightAnswer = getGcd(firstNumber, secondNumber, rightAnswer);
   return giveNeedingParameters;
 };
 
