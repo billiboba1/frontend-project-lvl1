@@ -5,11 +5,12 @@ const getGcd = (firstNumber, secondNumber, rightAnswer) => {
   let minimalNumber = rightAnswer;
   let forWhile = true;
   while (forWhile) {
-    if ((firstNumber % rightAnswer === 0) && (secondNumber % rightAnswer === 0)) {
-      forWhile = false;
+    if ((firstNumber % minimalNumber === 0) && (secondNumber % minimalNumber === 0)) {
+      break;
     }
     minimalNumber -= 1;
   }
+  console.log(minimalNumber);
   return minimalNumber;
 };
 
