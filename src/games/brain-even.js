@@ -10,7 +10,7 @@ const giveBrainEvenLogic = () => {
 };
 
 const startBrainEven = () => {
-  const condition = 'Answer "yes" if the numberber is even, otherwise answer "no".';
+  const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
   startMainLogic(condition, giveBrainEvenLogic);
 };
 

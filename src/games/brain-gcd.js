@@ -24,7 +24,7 @@ const giveBrainGcdLogic = () => {
 };
 
 const startBrainGcd = () => {
-  const condition = 'Find the greatest common divisor of given Numberbers.';
+  const condition = 'Find the greatest common divisor of given Numbers.';
   startMainLogic(condition, giveBrainGcdLogic);
 };
 
