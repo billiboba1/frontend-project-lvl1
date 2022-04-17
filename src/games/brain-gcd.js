@@ -2,10 +2,11 @@ import startMainLogic from '../index.js';
 import getRandom from '../utils.js';
 
 const getGcd = (firstNumber, secondNumber, rightAnswer) => {
-  minimalNumber = rightAnswer;
-  while (true) {
+  let minimalNumber = rightAnswer;
+  let forWhile = true;
+  while (forWhile) {
     if ((firstNumber % rightAnswer === 0) && (secondNumber % rightAnswer === 0)) {
-      break;
+      forWhile = false;
     }
     minimalNumber -= 1;
   }
