@@ -3,7 +3,7 @@ import getRandom from '../utils.js';
 
 const getGcd = (firstNumber, secondNumber, rightAnswer) => {
   let minimalNumber = rightAnswer;
-  let forWhile = true;
+  const forWhile = true;
   while (forWhile) {
     if ((firstNumber % minimalNumber === 0) && (secondNumber % minimalNumber === 0)) {
       break;
