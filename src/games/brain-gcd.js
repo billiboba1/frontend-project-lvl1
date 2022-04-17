@@ -16,9 +16,8 @@ const giveBrainGcdLogic = () => {
   const giveNeedingParameters = {};
   const secondNumber = getRandom(2, 60);
   const firstNumber = getRandom(2, 60);
-  let rightAnswer = Math.min(secondNumber, firstNumber);
   giveNeedingParameters.question = `Question: ${firstNumber} ${secondNumber}\nYour answer: `;
-  giveNeedingParameters.rightAnswer = getGcd(firstNumber, secondNumber, rightAnswer);
+  giveNeedingParameters.rightAnswer = getGcd(firstNumber, secondNumber, Math.min(secondNumber, firstNumber));
   return giveNeedingParameters;
 };
 
